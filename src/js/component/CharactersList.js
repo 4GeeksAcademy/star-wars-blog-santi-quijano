@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import CharacterCard from './CharacterCard';
 
 const CharactersList = () => {
   return (
-    <div>
-      
+    <div className='card-group'>
+      <CharacterCard />
     </div>
   )
 }

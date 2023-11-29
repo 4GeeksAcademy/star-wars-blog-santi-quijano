@@ -1,9 +1,10 @@
 import React from 'react'
+import StarshipsCard from './StarshipsCard'
 
 const StarshipsList = () => {
   return (
-    <div>
-      
+    <div className='card-group'>
+      <StarshipsCard />
     </div>
   )
 }

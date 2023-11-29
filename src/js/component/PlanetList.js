@@ -1,9 +1,10 @@
 import React from 'react'
+import PlanetCard from './PlanetCard'
 
 const PlanetList = () => {
   return (
-    <div>
-      
+    <div className='card-group'>
+      <PlanetCard />
     </div>
   )
 }

@@ -6,7 +6,7 @@ export const Navbar = () => {
 		<div className="">
 			<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#">Star Wars</a>
+    <a className="navbar-brand" href="#"><img src="https://p7.hiclipart.com/preview/792/718/522/skellig-michael-chewbacca-star-wars-computer-icons-star-wars.jpg" alt="StarWars Logo" width="80" height="80"/></a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
