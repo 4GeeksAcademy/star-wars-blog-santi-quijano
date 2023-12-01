@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 export const Navbar = () => {
   return (
     <div className="">
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-secondary" style={{ backgroundColor: "#F7F7F7" }}>
         <div className="container-fluid">
-          <a className="navbar-brand" href="#"><img src="https://p7.hiclipart.com/preview/792/718/522/skellig-michael-chewbacca-star-wars-computer-icons-star-wars.jpg" alt="StarWars Logo" width="80" height="80" /></a>
+          <a className="navbar-brand" href="#"><img src="https://cdn1.kibrispdr.org/data/929/star-wars-white-background-40.png" alt="StarWars Logo" width="120" height="75" style={{ marginLeft: "35px" }} /></a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
