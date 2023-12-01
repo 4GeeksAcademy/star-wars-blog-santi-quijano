@@ -10,7 +10,7 @@ const StarshipsCard = () => {
         <img src="https://placehold.co/400x200" className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">Name of the Starship</h5>
-          <ul className="card-text">
+          <ul className="card-text" style={{ listStyle: "none", padding: "0" }}>
             <li>Gender</li>
             <li>Hair Color</li>
             <li>Eye Color</li>
