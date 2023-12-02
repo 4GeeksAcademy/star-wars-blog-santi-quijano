@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Context } from "../store/appContext";
 
-const CharacterCard = () => {
+
+const CharacterCard = ({ item }) => {
+
+  const { store, actions } = useContext(Context);
+
   return (
     <div>
       &nbsp;
@@ -9,7 +14,7 @@ const CharacterCard = () => {
       <div className="card">
         <img src="https://placehold.co/400x200" className="card-img-top" alt="..." />
         <div className="card-body">
-          <h5 className="card-title">Name of the character</h5>
+          <h5 className="card-title">{item.name}</h5>
           <ul className="card-text" style={{ listStyle: "none", padding: "0" }}>
             <li>Gender</li>
             <li>Hair Color</li>
@@ -20,6 +25,6 @@ const CharacterCard = () => {
       </div>
     </div>
   )
-}
+};
 
-export default CharacterCard
+export default CharacterCard;
