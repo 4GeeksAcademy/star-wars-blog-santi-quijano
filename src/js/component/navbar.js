@@ -6,7 +6,7 @@ export const Navbar = () => {
     <div className="">
       <nav className="navbar navbar-expand-lg navbar-secondary" style={{ backgroundColor: "#F7F7F7" }}>
         <div className="container-fluid">
-          <a className="navbar-brand" href="#"><img src="https://cdn1.kibrispdr.org/data/929/star-wars-white-background-40.png" alt="StarWars Logo" width="120" height="75" style={{ marginLeft: "35px" }} /></a>
+          <a className="navbar-brand" href="#"><img src="https://www.freepnglogos.com/uploads/star-wars-logo-31.png" alt="StarWars Logo" width="120" height="120" style={{ marginLeft: "35px" }} /></a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
