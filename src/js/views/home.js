@@ -5,7 +5,7 @@ import PlanetList from "../component/PlanetList";
 import StarshipsList from "../component/StarshipsList";
 
 export const Home = () => (
-	<div className="card-lists w-25 mt-5 ms-5">
+	<div className="container">
 		<CharactersList />
 		&nbsp;
 		<PlanetList />

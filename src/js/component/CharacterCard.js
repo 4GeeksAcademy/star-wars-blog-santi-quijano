@@ -7,19 +7,13 @@ const CharacterCard = ({ item }) => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div>
+    <div className='container w-50'>
       &nbsp;
-      <h1 style={{ color: "red" }}>Characters</h1>
-      &nbsp;
-      <div className="card">
-        <img src="https://placehold.co/400x200" className="card-img-top" alt="..." />
+      <div className="card me-3" style={{ minWidth: "300px" }}>
+        <img src="https://placehold.co/600x400" className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{item.name}</h5>
-          <ul className="card-text" style={{ listStyle: "none", padding: "0" }}>
-            <li>Gender</li>
-            <li>Hair Color</li>
-            <li>Eye Color</li>
-          </ul>
+          <p className="card-text" style={{ padding: "0" }}></p>
           <a href="#" className="btn btn-primary">Learn more!</a>
         </div>
       </div>
