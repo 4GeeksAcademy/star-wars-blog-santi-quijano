@@ -13,7 +13,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
-			people: []
+			people: [],
+			planets: [],
+			vehicles: [],
+			favorites: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -39,17 +42,36 @@ const getState = ({ getStore, getActions, setStore }) => {
 				//reset the global store
 				setStore({ demo: demo });
 			},
-			getPeople: async () => {
-				try {
-					const peopleUrl = 'https://www.swapi.tech/api/people/';
-					const response = await fetch(peopleUrl);
-					let data = await response.json();
-
-					setStore({ people: data.results });
-				} catch (err) {
-					console.log(err);
-
-				}
+			getPeople: () => {
+				const store = getStore();
+				fetch("https://www.swapi.tech/api/people").then(response => response.json())
+					.then(data => {
+						setStore({ people: data.results })
+					})
+					.then(console.log)
+					.catch(error => {
+						console.log(error);
+					});
+			},
+			getPeopleDetails: (id, setParam) => {
+				const store = getStore();
+				fetch(`https://www.swapi.tech/api/people/${id}`).then(response => response.json())
+				.then(data => {
+					setParam(data)
+					})
+					.then(console.log)
+					.catch(error => {
+						console.log(error);
+					});
+			},
+			putFavorite: (item) => {
+				const store = getStore();
+			const favorite = store.favorite.concat(item);
+				setStore({ favorites: favorite});
+			},
+			removeFavorite: (index) => {
+				const store = getStore();
+			const favorite =
 			}
 		}
 	};
