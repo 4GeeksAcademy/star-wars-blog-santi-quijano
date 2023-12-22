@@ -56,8 +56,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getPeopleDetails: (id, setParam) => {
 				const store = getStore();
 				fetch(`https://www.swapi.tech/api/people/${id}`).then(response => response.json())
-				.then(data => {
-					setParam(data)
+					.then(data => {
+						setParam(data)
 					})
 					.then(console.log)
 					.catch(error => {
@@ -66,13 +66,49 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			putFavorite: (item) => {
 				const store = getStore();
-			const favorite = store.favorite.concat(item);
-				setStore({ favorites: favorite});
+				const favorite = store.favorite.concat(item);
+				setStore({ favorites: favorite });
 			},
 			removeFavorite: (index) => {
 				const store = getStore();
-			const favorite =
-			}
+				const favorite = store.favorites.filter((_c, i) => {
+					return index !== i
+				});
+				setStore({ favorites: favorite });
+			},
+			getPlanets: () => {
+				const store = getStore();
+				fetch("https://www.swapi.tech/api/planets").then(response => response.json())
+					.then(data => {
+						setStore({ planets: data.results })
+					})
+					.then(console.log)
+					.catch(error => {
+						console.log(error);
+					});
+			},
+			getPlanetsDetails: (id, setPlanet) => {
+				const store = getStore();
+				fetch(`https://www.swapi.tech/api/planets/${id}`).then(response => response.json())
+					.then(data => {
+						setPlanet(data)
+					})
+					.then(console.log)
+					.catch(error => {
+						console.log(error);
+					});
+			},
+			getVehicles: (id, setVehicle) => {
+				const store = getStore();
+				fetch(`https://www.swapi.tech/api/vehicles/${id}`).then(response => response.json())
+					.then(data => {
+						setVehicle(data)
+					})
+
+					.catch(error => {
+						console.log(error);
+					});
+			},
 		}
 	};
 };
